@@ -1,4 +1,4 @@
-# Fake News Detection System - Local and Modular AI Verifier
+# AI-Fake News Detection System 
 
 ## Overview
 
