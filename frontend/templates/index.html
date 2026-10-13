@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fake News Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container">
+        <header class="hero-header">
+            <div class="logo-badge">🛡️ AI Verifier</div>
+            <h1>Fake News Detection Engine</h1>
+            <p>Powered by DistilBERT Transformer Models & Advanced Semantic Analysis</p>
+        </header>
+
+        <main class="glass-card">
+            <!-- News Type & Category Generator Controls -->
+            <div class="generator-section">
+                <!-- 1. Select Real or Fake -->
+                <label class="section-label">1️⃣ Select Article Type</label>
+                <div class="type-pills">
+                    <button type="button" class="pill-type real active" onclick="selectType('real')">✅ Real News</button>
+                    <button type="button" class="pill-type fake" onclick="selectType('fake')">🛑 Fake News</button>
+                </div>
+
+                <!-- 2. Select Category -->
+                <label class="section-label" style="margin-top: 12px;">2️⃣ Select Topic Category</label>
+                <div class="category-pills">
+                    <button type="button" class="pill active" onclick="selectCategory('science')">🔬 Science & Tech</button>
+                    <button type="button" class="pill" onclick="selectCategory('politics')">🏛️ Politics</button>
+                    <button type="button" class="pill" onclick="selectCategory('health')">💊 Health & Lifestyle</button>
+                </div>
+
+                <button type="button" id="auto-fill-btn" onclick="fetchRandomSample()">🎲 Generate Article Sample</button>
+            </div>
+
+            <hr class="divider">
+
+            <!-- Input Form Fields -->
+            <div class="input-group">
+                <label for="news-title">Article Headline</label>
+                <input type="text" id="news-title" placeholder="Click 'Generate Article Sample' or type headline here...">
+            </div>
+
+            <div class="input-group">
+                <label for="news-text">Article Body Content <span>*</span></label>
+                <textarea id="news-text" rows="5" placeholder="Paste or generate article text to verify authenticity..."></textarea>
+            </div>
+
+            <button id="analyze-btn" onclick="analyzeNews()">Verify Article Authenticity</button>
+            
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing semantic patterns & contextual weights...</p>
+            </div>
+
+            <!-- Result Display Box -->
+            <div id="result-container" class="hidden">
+                <div class="result-header">
+                    <h3>Analysis Result</h3>
+                    <span id="expected-hint" class="hint-tag"></span>
+                </div>
+                <div id="prediction-badge" class="badge"></div>
+                <div class="confidence-box">
+                    <span>Model Confidence:</span>
+                    <div class="progress-bar-bg">
+                        <div id="confidence-bar" class="progress-bar-fill"></div>
+                    </div>
+                    <span id="confidence-score">0</span>%
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

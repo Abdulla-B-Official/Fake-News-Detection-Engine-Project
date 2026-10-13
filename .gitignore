@@ -1,0 +1,18 @@
+# Virtual environment
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Large model binaries (Keep configuration files like config.json, exclude heavy weights)
+saved_fake_news_model/*.safetensors
+saved_fake_news_model/*.bin
+results/
+
+# OS / IDE generated files
+.DS_Store
+.vscode/
