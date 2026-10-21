@@ -1,5 +1,17 @@
 # AI-Fake News Detection System 
 
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-Text_Classification-orange?style=for-the-badge)
+![Scikit-Learn](https://img.shields.io/badge/Scikit_Learn-Machine_Learning-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-Deep_Learning-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-Web_API-005571?style=for-the-badge&logo=fastapi&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
+<p align="center">
+  <b>An end-to-end Fake News Detection Engine designed to preprocess text, extract linguistic features, and classify news articles as authentic or misleading using natural language processing and machine learning algorithms.</b>
+</p>
+
+---
 ## Overview
 
 The Fake News Detection System is an AI-powered natural language processing application designed to classify news articles and headlines as either genuine or fabricated with high confidence.
